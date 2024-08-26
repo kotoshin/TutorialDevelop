@@ -77,6 +77,7 @@ public class UserController {
             return getUser(null,model,user);
         }
         // User登録
+        user.setId(id);
         service.saveUser(user);
         // 一覧画面にリダイレクト
         return "redirect:/user/list";
